@@ -1,15 +1,10 @@
 var bodyParser = require('body-parser');
-
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-
 var mongoose = require('mongoose');
-
 mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds027425.mlab.com:27425/todos');
-
 var todoSchema = new mongoose.Schema({
   item: String
 });
-
 var Todo = mongoose.model('Todo', todoSchema);
 
 // var itemOne = Todo({item: 'buy flowers'}).save(function(err) {
