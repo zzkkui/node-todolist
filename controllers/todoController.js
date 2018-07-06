@@ -4,7 +4,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://Quintus:pp112358@ds027425.mlab.com:27425/todos');
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds027425.mlab.com:27425/todos');
 
 var todoSchema = new mongoose.Schema({
   item: String
